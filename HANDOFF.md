@@ -90,6 +90,27 @@
     - `L_gainfriends_2dbarcodes_GW.png`
       - KDY Office LINE公式アカウントの友だち追加QR。
       - 元ファイルは `/Users/minoru/Downloads/2dbarcodes_GW.zip` から展開。
+    - `sample-hp-qr.png`
+      - サンプルHP確認用QR。
+      - 現在はGitHubのHTMLプレビューURLを指している。
+
+## 公開URL
+
+GitHubリポジトリ:
+
+`https://github.com/kdyoffice/kdy-exterior-sample`
+
+サンプルHPの暫定公開URL:
+
+`https://htmlpreview.github.io/?https://github.com/kdyoffice/kdy-exterior-sample/blob/main/index.html`
+
+注意:
+
+- GitHub Desktopから公開リポジトリ作成までは完了済み。
+- GitHub Pagesの本命URL候補は `https://kdyoffice.github.io/kdy-exterior-sample/`。
+- ただしGitHub Pages設定画面での有効化がブラウザ操作の不安定さにより完了していない。
+- 2026-05-10時点で `curl -I https://kdyoffice.github.io/kdy-exterior-sample/` は `404`。
+- 後でGitHubの `Settings > Pages` から Source を `Deploy from a branch`、Branch を `main / root` にして保存すれば、チラシ中央QRとLINE自動応答のサンプルURLを本命URLへ差し替える。
 
 ## 現在のチラシ内容
 
@@ -140,7 +161,14 @@ LINE友だち追加URL:
 
 `https://lin.ee/nT7JVWE`
 
-チラシ内のQRは、上記LINE友だち追加URL用のQRに差し替え済み。
+チラシ内のQR配置:
+
+- 中央の「まずはサンプルだけ見てください。」欄
+  - `assets/sample-hp-qr.png`
+  - サンプルHP確認用QR。
+- 右下の問い合わせ欄
+  - `assets/L_gainfriends_2dbarcodes_GW.png`
+  - KDY Office LINE友だち追加QR。
 
 ## LINE公式アカウントについての方針
 
@@ -309,6 +337,8 @@ PDF出力時に一度、スマホ用CSSが効いてA4なのに縦長レイアウ
 
 - LINE友だち追加QRをチラシに反映済み。
 - メールアドレス `k.d.yoffice.co@gmail.com` を問い合わせ欄に追加済み。
+- ユーザー指示により、中央QRはサンプルHP確認用、右下のメール横QRはKDY Office LINE友だち追加用に修正済み。
+- サンプルHP確認用QRは `assets/sample-hp-qr.png`。
 - メール追加後に白紙2ページ目が出たため、`@media print` 側を調整。
   - `.flyer` を `height: 297mm`
   - `padding: 7mm`
@@ -316,6 +346,8 @@ PDF出力時に一度、スマホ用CSSが効いてA4なのに縦長レイアウ
   - `overflow: hidden`
   - Hero画像や余白を少し圧縮
 - PDF再生成後、`strings flyer-a4.pdf | rg '^/Count '` で `/Count 1` を確認済み。
+- 最新PDF `flyer-a4.pdf` は2026-05-10に再生成済み。
+- 最新確認画像 `flyer-a4-check.png` では、A4 1ページ内に中央サンプルHP QRと右下LINE QRが収まっている。
 
 PDF生成・確認に使ったコマンド例:
 
@@ -352,9 +384,10 @@ strings flyer-a4.pdf | rg '^/Count '
    - “御社”が硬すぎる場合は「あなたのお店」「貴社」などに調整。
 
 2. サンプルHP公開URLの反映
-   - 現在のQRはLINE友だち追加用。
-   - サンプルHPの公開URLが決まったら、LINE自動応答の `サンプル希望` にURLを追記する。
-   - チラシのQRはLINE友だち追加のままでよい。紙からLINEに登録してもらえるため。
+   - 現在の中央QRは暫定のGitHub HTMLプレビューURL。
+   - GitHub Pagesを有効化できたら、中央QRを `https://kdyoffice.github.io/kdy-exterior-sample/` に差し替える。
+   - LINE自動応答の `サンプル希望` にも本命URLを追記する。
+   - 右下の問い合わせ欄QRはLINE友だち追加用のままでよい。
 
 3. サンプルHPの最終チェック
    - 施工事例写真の重複、不自然なBefore/After、スマホ表示を再確認。
