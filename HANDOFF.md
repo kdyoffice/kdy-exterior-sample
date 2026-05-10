@@ -92,7 +92,7 @@
       - 元ファイルは `/Users/minoru/Downloads/2dbarcodes_GW.zip` から展開。
     - `sample-hp-qr.png`
       - サンプルHP確認用QR。
-      - 現在はGitHubのHTMLプレビューURLを指している。
+      - 現在はGitHub Pages公開URLを指している。
 
 ## 公開URL
 
@@ -100,17 +100,17 @@ GitHubリポジトリ:
 
 `https://github.com/kdyoffice/kdy-exterior-sample`
 
-サンプルHPの暫定公開URL:
+サンプルHPの公開URL:
 
-`https://htmlpreview.github.io/?https://github.com/kdyoffice/kdy-exterior-sample/blob/main/index.html`
+`https://kdyoffice.github.io/kdy-exterior-sample/`
 
 注意:
 
 - GitHub Desktopから公開リポジトリ作成までは完了済み。
-- GitHub Pagesの本命URL候補は `https://kdyoffice.github.io/kdy-exterior-sample/`。
-- ただしGitHub Pages設定画面での有効化がブラウザ操作の不安定さにより完了していない。
-- 2026-05-10時点で `curl -I https://kdyoffice.github.io/kdy-exterior-sample/` は `404`。
-- 後でGitHubの `Settings > Pages` から Source を `Deploy from a branch`、Branch を `main / root` にして保存すれば、チラシ中央QRとLINE自動応答のサンプルURLを本命URLへ差し替える。
+- GitHub Pagesは有効化済み。
+- GitHubの `Settings > Pages` で Source は `Deploy from a branch`、Branch は `main / root`。
+- 2026-05-10時点で `curl -I https://kdyoffice.github.io/kdy-exterior-sample/` は `HTTP/2 200` を確認済み。
+- チラシ中央QRの `assets/sample-hp-qr.png` は、このGitHub Pages公開URLを指す。
 
 ## 現在のチラシ内容
 
@@ -276,13 +276,20 @@ HP・LINE導線・QR付き名刺までまとめて整えます。
 
 職人さん・施工店向けの見本サイトをご案内します。
 
-現在、サンプルHPの公開準備中です。
-公開URLができ次第、こちらから確認できるようにします。
+こちらからサンプルHPを確認できます。
+https://kdyoffice.github.io/kdy-exterior-sample/
+
+施工事例、料金目安、お客様の声、Googleマップ連携まで入れた見本サイトです。
 
 先に相談したい場合は、このまま
 「相談希望」
 と送ってください。
 ```
+
+注意:
+
+- LINE Official Account Manager上の `サンプル希望` 自動応答が、まだ上記の最新版に差し替わっていない可能性がある。
+- 次にLINE管理画面を触る時は、`サンプル希望` の応答文を上記に更新する。
 
 リッチメニュー:
 
@@ -339,6 +346,7 @@ PDF出力時に一度、スマホ用CSSが効いてA4なのに縦長レイアウ
 - メールアドレス `k.d.yoffice.co@gmail.com` を問い合わせ欄に追加済み。
 - ユーザー指示により、中央QRはサンプルHP確認用、右下のメール横QRはKDY Office LINE友だち追加用に修正済み。
 - サンプルHP確認用QRは `assets/sample-hp-qr.png`。
+- `assets/sample-hp-qr.png` は `https://kdyoffice.github.io/kdy-exterior-sample/` を指すQRとして再生成済み。
 - メール追加後に白紙2ページ目が出たため、`@media print` 側を調整。
   - `.flyer` を `height: 297mm`
   - `padding: 7mm`
@@ -383,11 +391,10 @@ strings flyer-a4.pdf | rg '^/Count '
    - 「お借りした写真」など、営業先に違和感がないか確認。
    - “御社”が硬すぎる場合は「あなたのお店」「貴社」などに調整。
 
-2. サンプルHP公開URLの反映
-   - 現在の中央QRは暫定のGitHub HTMLプレビューURL。
-   - GitHub Pagesを有効化できたら、中央QRを `https://kdyoffice.github.io/kdy-exterior-sample/` に差し替える。
-   - LINE自動応答の `サンプル希望` にも本命URLを追記する。
-   - 右下の問い合わせ欄QRはLINE友だち追加用のままでよい。
+2. LINE自動応答の最終更新
+   - GitHub Pages公開URLは確定済み。
+   - LINE自動応答の `サンプル希望` が未更新なら、上記の公開URL入り文面に差し替える。
+   - チラシ中央QRはサンプルHP公開URL、右下の問い合わせ欄QRはLINE友だち追加用のままでよい。
 
 3. サンプルHPの最終チェック
    - 施工事例写真の重複、不自然なBefore/After、スマホ表示を再確認。
