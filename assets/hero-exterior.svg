@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">外構工事後の住宅まわり</title>
+  <desc id="desc">カーポート、フェンス、植栽、土間コンクリートを備えた住宅外構のイメージ</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d9ecf2"/>
+      <stop offset="1" stop-color="#f8f4e8"/>
+    </linearGradient>
+    <linearGradient id="drive" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e5e2da"/>
+      <stop offset="1" stop-color="#beb9ad"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#1f2a24" flood-opacity=".22"/>
+    </filter>
+  </defs>
+  <rect width="1400" height="900" fill="url(#sky)"/>
+  <path d="M0 603 C192 540 392 552 553 594 C743 644 896 633 1052 589 C1190 550 1293 548 1400 574 L1400 900 L0 900 Z" fill="#9caf88"/>
+  <path d="M0 677 C193 635 337 658 484 696 C701 752 872 734 1030 686 C1172 643 1277 650 1400 675 L1400 900 L0 900 Z" fill="#6f855e"/>
+  <g filter="url(#softShadow)">
+    <path d="M339 307 L621 155 L904 307 L904 596 L339 596 Z" fill="#f7f2e4"/>
+    <path d="M296 324 L621 141 L947 324 L918 365 L621 200 L324 365 Z" fill="#5a5f52"/>
+    <rect x="420" y="388" width="154" height="208" fill="#875f43"/>
+    <rect x="621" y="389" width="197" height="120" rx="8" fill="#a7c5c7"/>
+    <rect x="646" y="410" width="147" height="77" rx="4" fill="#d7eef0"/>
+  </g>
+  <g opacity=".95">
+    <path d="M795 445 C940 394 1106 406 1225 452 L1190 497 C1080 463 959 463 835 502 Z" fill="#d9e1df"/>
+    <path d="M803 450 C946 407 1092 416 1213 456" fill="none" stroke="#52645f" stroke-width="14" stroke-linecap="round"/>
+    <path d="M846 494 L846 668 M1173 488 L1173 668" stroke="#52645f" stroke-width="16" stroke-linecap="round"/>
+  </g>
+  <path d="M402 636 L1088 636 L1307 900 L207 900 Z" fill="url(#drive)"/>
+  <g fill="none" stroke="#aaa493" stroke-width="3" opacity=".55">
+    <path d="M485 658 L397 900"/>
+    <path d="M631 652 L590 900"/>
+    <path d="M792 652 L834 900"/>
+    <path d="M947 658 L1087 900"/>
+    <path d="M351 726 L1192 726"/>
+    <path d="M282 815 L1264 815"/>
+  </g>
+  <g>
+    <rect x="70" y="538" width="305" height="34" rx="4" fill="#715f49"/>
+    <rect x="70" y="596" width="305" height="34" rx="4" fill="#715f49"/>
+    <rect x="92" y="514" width="18" height="141" rx="4" fill="#4f4438"/>
+    <rect x="335" y="514" width="18" height="141" rx="4" fill="#4f4438"/>
+  </g>
+  <g>
+    <circle cx="118" cy="705" r="58" fill="#3f6b45"/>
+    <circle cx="203" cy="696" r="73" fill="#537f4f"/>
+    <circle cx="300" cy="713" r="55" fill="#486f46"/>
+    <rect x="132" y="730" width="185" height="45" rx="22" fill="#7a5d40"/>
+  </g>
+  <g opacity=".75">
+    <circle cx="1098" cy="238" r="68" fill="#f3c25b"/>
+    <circle cx="1098" cy="238" r="102" fill="#f3c25b" opacity=".18"/>
+  </g>
+</svg>
