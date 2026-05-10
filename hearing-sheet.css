@@ -1,0 +1,155 @@
+:root {
+  --ink: #25323a;
+  --muted: #68777f;
+  --line: #c9d4d2;
+  --paper: #ffffff;
+  --field: #f3f7f6;
+  --green: #4f8f8b;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Hiragino Sans", "Yu Gothic", "Noto Sans JP", system-ui, sans-serif;
+  color: var(--ink);
+  background: #e9eeec;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.sheet {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 16px auto;
+  padding: 12mm 11mm;
+  background: var(--paper);
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.sheet-head {
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.sheet-head h1 {
+  font-size: 20px;
+  margin: 0;
+  letter-spacing: .04em;
+}
+
+.meta {
+  font-size: 10.5px;
+  color: var(--muted);
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.meta .brand {
+  color: var(--green);
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px 10px;
+  flex: 1;
+}
+
+.block {
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 7px 9px 8px;
+  background: var(--paper);
+}
+
+.block.wide { grid-column: 1 / -1; }
+
+.block.emphasize {
+  background: var(--field);
+  border-color: var(--green);
+}
+
+.block h2 {
+  font-size: 12.5px;
+  margin: 0 0 5px;
+  color: var(--ink);
+  border-bottom: 1px dashed var(--line);
+  padding-bottom: 3px;
+  letter-spacing: .02em;
+}
+
+.block h2 small {
+  font-size: 10px;
+  color: var(--green);
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+.block ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.block li {
+  padding: 2.5px 0;
+  border-bottom: 1px dotted #e5ebe9;
+  min-height: 18px;
+}
+
+.block li:last-child { border-bottom: none; }
+
+.cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 16px;
+}
+
+.check {
+  display: inline-block;
+  margin: 2px 8px 2px 0;
+  white-space: nowrap;
+  color: var(--ink);
+}
+
+.memo .memo-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1.4fr;
+  gap: 4px 14px;
+}
+
+.memo .memo-grid > div {
+  padding: 4px 0;
+  border-bottom: 1px solid var(--line);
+  min-height: 26px;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  html, body {
+    background: #fff;
+  }
+  .sheet {
+    margin: 0;
+    box-shadow: none;
+    width: 210mm;
+    height: 297mm;
+    padding: 11mm 10mm;
+  }
+}

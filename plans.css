@@ -1,0 +1,206 @@
+:root {
+  --ink: #25323a;
+  --muted: #68777f;
+  --line: #c9d4d2;
+  --paper: #ffffff;
+  --field: #f3f7f6;
+  --green: #4f8f8b;
+  --green-dark: #365f68;
+  --accent: #e7f0ee;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Hiragino Sans", "Yu Gothic", "Noto Sans JP", system-ui, sans-serif;
+  color: var(--ink);
+  background: #e9eeec;
+  font-size: 10.5px;
+  line-height: 1.55;
+}
+
+.sheet {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 16px auto;
+  padding: 11mm 11mm;
+  background: var(--paper);
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.sheet-head {
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.sheet-head h1 {
+  font-size: 22px;
+  margin: 0 0 2px;
+  letter-spacing: .04em;
+}
+
+.sheet-head .sub {
+  margin: 0;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.brand {
+  text-align: right;
+  font-size: 10px;
+}
+.brand-name {
+  color: var(--green-dark);
+  font-weight: 700;
+  letter-spacing: .08em;
+  font-size: 13px;
+}
+.brand-mail { color: var(--muted); }
+
+.block {
+  margin-bottom: 9px;
+  padding: 8px 10px 9px;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+}
+
+.block.highlight {
+  background: var(--accent);
+  border-color: var(--green);
+}
+
+.block h2 {
+  font-size: 13px;
+  margin: 0 0 6px;
+  color: var(--green-dark);
+  border-bottom: 1px dashed var(--line);
+  padding-bottom: 3px;
+  letter-spacing: .02em;
+}
+
+.block h2 small {
+  font-size: 10.5px;
+  color: var(--muted);
+  font-weight: 400;
+  letter-spacing: 0;
+  margin-left: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10.5px;
+}
+
+table th, table td {
+  text-align: left;
+  vertical-align: top;
+  padding: 4px 6px;
+  border-bottom: 1px solid #e5ebe9;
+}
+
+table thead th {
+  font-size: 10px;
+  color: var(--muted);
+  font-weight: 600;
+  border-bottom: 1.5px solid var(--line);
+  background: transparent;
+}
+
+table tbody th {
+  width: 23%;
+  white-space: nowrap;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+td.price, th.price {
+  width: 16%;
+  white-space: nowrap;
+  color: var(--green-dark);
+  font-weight: 700;
+  font-size: 11.5px;
+}
+
+tr.recommended {
+  background: rgba(79, 143, 139, .14);
+}
+
+tr.recommended th {
+  position: relative;
+}
+
+.badge {
+  display: inline-block;
+  margin-left: 5px;
+  padding: 1px 5px;
+  background: var(--green);
+  color: #fff;
+  border-radius: 3px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  vertical-align: middle;
+}
+
+.note {
+  margin: 5px 0 0;
+  font-size: 9.5px;
+  color: var(--muted);
+}
+
+.sheet-foot {
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px dashed var(--line);
+  font-size: 10px;
+}
+
+.conditions {
+  margin-bottom: 5px;
+}
+
+.conditions strong {
+  color: var(--ink);
+  margin-right: 8px;
+}
+
+.conditions span {
+  color: var(--muted);
+}
+
+.cta {
+  background: var(--ink);
+  color: #fff;
+  padding: 7px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: .02em;
+}
+
+@media print {
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  html, body { background: #fff; }
+  .sheet {
+    margin: 0;
+    box-shadow: none;
+    width: 210mm;
+    height: 297mm;
+    padding: 11mm 10mm;
+  }
+}
