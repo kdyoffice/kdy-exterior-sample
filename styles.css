@@ -16,6 +16,11 @@
   box-sizing: border-box;
 }
 
+.nobreak {
+  display: inline-block;
+  white-space: nowrap;
+}
+
 html {
   scroll-behavior: smooth;
 }
